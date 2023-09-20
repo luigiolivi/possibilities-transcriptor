@@ -15,11 +15,35 @@ const possibilidades = () => {
 
 const transcricao = () => {
     let resultado = []
-    for(let i = 0; i < nomes.length; i++) {
-        for(let j = 0; j < nomes[i].length; j++) {
+
+    nomes[0].forEach((item) => {
+        let itens = []
+
+        let itensJ  = []
+        
+        let j = 0
+        for(let i = 1; i < nomes.length; ) {
+            
+            for ( ; j < nomes[i].length; ) {
+                itensJ = nomes[i][j]
+            }
+
+            if (i < nomes.length) i++
+            else {
+                itens.push(itensJ)
+                itensJ = []
+                i = 1
+            }
+            
+            if (i == nomes.length && j == nomes[i].length) {
+
+            }
             
         }
-    }    
+        
+        
+    })
+        
 }
 
 console.log(possibilidades())
